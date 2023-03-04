@@ -21,3 +21,10 @@ loadMoreBtn.addEventListener("click", () => {
     loadMoreBtn.style.display = "none";
   }
 });
+
+$(".oneCard").mouseenter(function () {
+  $(".oneCard").addClass("addBlur");
+});
+$(".oneCard").mouseleave(function () {
+  $(".oneCard").removeClass("addBlur");
+});

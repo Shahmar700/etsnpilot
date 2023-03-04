@@ -444,6 +444,10 @@ header span {
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   transform: scale(1.02);
+  filter: blur(0);
+}
+.addBlur{
+  filter: blur(2px);
 }
 .sec6Cards .oneCard .oneCardImg {
   width: 100%;
