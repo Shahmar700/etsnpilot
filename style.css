@@ -5,6 +5,24 @@
   list-style: none;
   text-decoration: none;
 }
+/* svg {
+  border: 1px solid red;
+} */
+svg path {
+  fill: #f4f7fb;
+  stroke: #81ae33;
+  stroke-width: 0.25;
+}
+svg path:hover {
+  /* fill: #4d4d4d; */
+  fill: #a09f9f;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.fillPath {
+  fill: #4d4d4d;
+}
+
 /*Fonts*/
 @font-face {
   font-family: "helvetica100";
@@ -286,12 +304,65 @@ header span {
   padding: 28px 0;
 }
 .section4 .sec4Map {
-  width: 66%;
+  width: 75%;
   margin: 0 auto;
+  position: relative;
 }
-.section4 .sec4Map img {
+.section4 .sec4Map svg {
   width: 100%;
   height: 100%;
+}
+.section4 .sec4Map .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #298929;
+  transition: 0.4s;
+  width: 200px;
+  height: 100px;
+  /* opacity: 1;
+  visibility: visible; */
+}
+.sec4Map .modal .closeModal {
+  color: #298929;
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.modalClosed {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+.modalShow {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+#region{
+  margin-bottom: 7px;
+}
+#tree i {
+  color: #298929;
+}
+#region,
+#tree {
+  font-family: "helvetica500";
+  font-size: 15px ;
+}
+#regionSpan,
+#treeSpan {
+  font-family: "helvetica300";
 }
 /* Section 4 End--- */
 
@@ -370,7 +441,9 @@ header span {
   cursor: pointer;
 }
 .sec6Cards .oneCard:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transform: scale(1.02);
 }
 .sec6Cards .oneCard .oneCardImg {
   width: 100%;
@@ -404,6 +477,10 @@ header span {
   font-size: 18px;
   line-height: 22px;
   color: #298929;
+}
+.sec6Cards .oneCardHeading, 
+.sec6Cards .oneCardInfo{
+  padding: 5px;
 }
 .sec6Cards .oneCardInfo p {
   font-family: "helvetica300";
