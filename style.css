@@ -96,7 +96,7 @@ header span {
   display: flex;
   align-items: center;
 }
-.logoSide.forMobile{
+.logoSide.forMobile {
   display: none;
 }
 .logoSide p {
@@ -309,13 +309,13 @@ header span {
   width: 50%;
   padding: 100px 0;
 }
-.sec5Inner .leftSide .greenLogo{
-    width: 196px;
-    height: 76px;
+.sec5Inner .leftSide .greenLogo {
+  width: 196px;
+  height: 76px;
 }
-.sec5Inner .leftSide .greenLogo img{
-    width: 100%;
-    height: 100%;
+.sec5Inner .leftSide .greenLogo img {
+  width: 100%;
+  height: 100%;
 }
 .sec5Inner .rightSide {
   width: 320px;
@@ -459,7 +459,11 @@ footer p {
 }
 .informations {
   margin-top: 80px;
-  list-style-type: disc !important;
+}
+.informations ol {
+  margin-left: 30px;
+}
+.informations ol li {
   list-style: disc;
 }
 .informations h1,
@@ -502,6 +506,6 @@ h4 {
   line-height: 32px;
   color: #4d4d4d;
 }
-.informations .remember{
+.informations .remember {
   margin-top: 48px;
 }
