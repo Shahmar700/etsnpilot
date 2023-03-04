@@ -22,9 +22,53 @@ loadMoreBtn.addEventListener("click", () => {
   }
 });
 
+// Hover Effect For News
+
 $(".oneCard").mouseenter(function () {
   $(".oneCard").addClass("addBlur");
 });
 $(".oneCard").mouseleave(function () {
   $(".oneCard").removeClass("addBlur");
 });
+
+// Counter Animation
+
+let sectionCounter = document.querySelector("#sectionCounter");
+let counters = document.querySelectorAll(".statistics .counter");
+
+// Scroll Animation For Counter
+
+let CounterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    let [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    let speed = 100;
+    counters.forEach((counter, index) => {
+      function UpdateCounter() {
+        const targetNumber = +counter.dataset.target;
+        const initialNumber = +counter.innerText;
+        const incPerCount = targetNumber / speed;
+        if (initialNumber < targetNumber) {
+          counter.innerText = Math.ceil(initialNumber + incPerCount);
+          setTimeout(UpdateCounter, 40);
+        }
+      }
+      UpdateCounter();
+
+      if (counter.parentElement.style.animation) {
+        counter.parentElement.style.animation = "";
+      } else {
+        counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+          index / counters.length + 0.5
+        }s`;
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.4,
+  }
+);
+
+CounterObserver.observe(sectionCounter);
