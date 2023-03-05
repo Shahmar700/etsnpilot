@@ -302,11 +302,13 @@ header span {
   border: 2px solid #e6e6e6;
   border-radius: 8px;
   padding: 28px 0;
+  position: relative;
+  width: 100%;
+  position: relative;
 }
 .section4 .sec4Map {
   width: 75%;
   margin: 0 auto;
-  position: relative;
 }
 .section4 .sec4Map svg {
   width: 100%;
@@ -314,11 +316,10 @@ header span {
 }
 .section4 .sec4Map .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  padding: 10px;
+  top: 37px;
+  right: -85px;
+  background-color: transparent;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,17 +327,14 @@ header span {
   border-radius: 8px;
   border: 1px solid #298929;
   transition: 0.4s;
-  width: 200px;
-  height: 100px;
-  /* opacity: 1;
-  visibility: visible; */
+  z-index: 99;
 }
 .sec4Map .modal .closeModal {
   color: #298929;
   font-size: 30px;
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 0;
+  right: 7px;
   cursor: pointer;
 }
 .modalClosed {

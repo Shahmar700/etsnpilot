@@ -314,7 +314,21 @@
     color: #4d4d4d;
   }
 }
-
+@media screen and (max-width: 560px) {
+  .section4 .sec4Map .modal {
+    top: -37px;
+    right: -85px;
+    padding: 10px;
+  }
+  .sec4Map .modal .closeModal {
+    color: #298929;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 7px;
+    cursor: pointer;
+  }
+}
 @media screen and (max-width: 500px) {
   .section1 {
     height: 278px;

@@ -75,7 +75,9 @@ let treeSpan = document.getElementById("treeSpan");
 let modal = document.querySelector(".sec4Map .modal");
 let closeModal = document.querySelector(".sec4Map .modal .closeModal");
 let path = document.querySelectorAll("path").forEach((e) => {
-  e.addEventListener("click", () => {
+  e.addEventListener("click", (event) => {
+    // modal.style.top = `${event.clientY}px`;
+    // modal.style.left = `${event.clientX}px`;
     [...document.querySelectorAll("path")].map((p) =>
       p.classList.remove("fillPath")
     );
@@ -99,5 +101,3 @@ let path = document.querySelectorAll("path").forEach((e) => {
     modal.classList.remove("modalShow");
   });
 });
-
-
